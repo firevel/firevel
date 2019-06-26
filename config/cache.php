@@ -14,7 +14,7 @@ return [
     | not explicitly specified when executing a given caching function.
     |
     | Supported: "apc", "array", "database", "file",
-    |            "memcached", "redis", "dynamodb"
+    |            "memcached", "redis", "dynamodb", "firestore"
     |
     */
 
@@ -50,6 +50,11 @@ return [
         'file' => [
             'driver' => 'file',
             'path' => storage_path('framework/cache/data'),
+        ],
+
+        'firestore' => [
+            'driver' => 'firestore',
+            'collection' => 'cache',
         ],
 
         'memcached' => [
