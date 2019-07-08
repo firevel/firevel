@@ -1,10 +1,10 @@
 {
-    "name": "laravel/laravel",
+    "name": "firevel/firevel",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The Serverless Laravel Framework for Google App Engine + Firestore.",
     "keywords": [
         "framework",
-        "laravel"
+        "firevel"
     ],
     "license": "MIT",
     "require": {
