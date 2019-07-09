@@ -1,0 +1,27 @@
+runtime: php72
+
+env_variables:
+  ## Put production environment variables here.
+  APP_KEY: ${APP_KEY}
+  APP_ENV: production
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  LOG_CHANNEL: stackdriver
+  APP_DEBUG: false
+  SESSION_DRIVER: firestore
+  CACHE_DRIVER: firestore
+
+handlers:
+- url: /robots.txt
+  static_files: public/robots.txt
+  upload: public/robots.txt
+
+- url: /favicon.ico
+  static_files: public/favicon.ico
+  upload: public/favicon.ico
+
+- url: /static
+  static_dir: public/static
+
+- url: .*
+  script: auto
