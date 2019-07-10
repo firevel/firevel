@@ -1,8 +1,9 @@
 steps:
-- name: 'ubuntu'
-  args: ['sh','setup-env.sh']
+- name: 'gcr.io/google-appengine/php72'
+  args: ['sh','ci/build-production.sh']
   env:
   - '_APP_KEY=${_APP_KEY}'
+
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
