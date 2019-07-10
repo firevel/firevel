@@ -1,8 +1,8 @@
 runtime: php72
 
 env_variables:
-  ## Put production environment variables here.
-  APP_KEY: ${APP_KEY}
+  ## Put your environment variables here.
+  APP_KEY: ${_APP_KEY}
   APP_ENV: production
   APP_STORAGE: /tmp
   VIEW_COMPILED_PATH: /tmp

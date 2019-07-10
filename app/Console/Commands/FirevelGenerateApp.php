@@ -51,6 +51,7 @@ class FirevelGenerateApp extends Command
 
         $app = file_get_contents($this->filename.'.example');
         foreach ($_ENV as $key => $value) {
+            $app = str_replace("\${_{$key}}", $value, $app); // Cloud build use _VAR_NAME format for env variables.
             $app = str_replace("\${{$key}}", $value, $app);
         }
         
