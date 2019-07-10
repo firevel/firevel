@@ -1,0 +1,8 @@
+steps:
+- name: 'ubuntu'
+  args: ['sh','setup-env.sh']
+  env:
+  - '_APP_KEY=${_APP_KEY}'
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy"]
+timeout: "1600s"
