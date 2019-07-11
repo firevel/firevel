@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
+        "firevel/firequent": "^0.0.1",
         "firevel/firestore": "^1.0.0",
         "firevel/firestore-cache-driver": "^1.0",
         "firevel/firestore-session-driver": "^1.0",
