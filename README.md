@@ -4,9 +4,9 @@
 
 Firevel is a modified, serverless version of [Laravel Framework](https://laravel.com/) designed to work inside Google App Engine standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
 
-Beside regular [Laravel Framework](https://laravel.com/) benefits it offers:
+In addition to standard [Laravel Framework](https://laravel.com/) benefits it offers:
 
-- Simple setup.
+- Simple, serverless setup.
 - Downscaling to zero.
 - Micro-service friendly design.
 - [Free tier eligibility](https://cloud.google.com/free/).
@@ -18,7 +18,7 @@ Beside regular [Laravel Framework](https://laravel.com/) benefits it offers:
 
 2) [Install gcloud command-line tool](https://cloud.google.com/sdk/gcloud/).
 
-3) Install framework:
+3) Create firevel project with:
 ```
 composer create-project firevel/firevel
 ```
@@ -32,15 +32,18 @@ Firevel does not require any credentials while running inside App Engine. If you
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
-Firevel is a Laravel 5.8 after [small updates](https://github.com/firevel/firevel/commits/master) and installed packages:
+Firevel is a Laravel 5.8 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
 - [Firestore Session driver](https://github.com/firevel/firestore-session-driver)
 - [Firestore Cache driver](https://github.com/firevel/firestore-cache-driver)
 - [Stack driver log channel](https://github.com/firevel/stackdriver-log-channel)
 - [Laravel Firestore wrapper](https://github.com/firevel/firestore)
+- [Firequent](https://github.com/firevel/firequent)
 
 ## Usage
 
-You can use Firevel in the same way you use Laravel. Be aware of [Firebase limits](https://firebase.google.com/docs/firestore/quotas) and [Google App Engine limits](https://cloud.google.com/appengine/docs/standard/php7/runtime). You should also replace Eloquent models with [Firequent](https://github.com/firevel/firequent), by using `use Firevel\Firequent\Model;` instead of `use Illuminate\Database\Eloquent\Model;` inside a model class. Keep in mind that Firequent is in beta and support only basic queries.
+You can use Firevel in the same way you use Laravel. Be aware of [Firebase limits](https://firebase.google.com/docs/firestore/quotas) and [Google App Engine limits](https://cloud.google.com/appengine/docs/standard/php7/runtime).
+
+You should also replace Eloquent models with [Firequent](https://github.com/firevel/firequent), by using `use Firevel\Firequent\Model;` instead of `use Illuminate\Database\Eloquent\Model;` inside a model class. Keep in mind that Firequent is in beta and support only basic queries.
 
 ## CI
 
@@ -54,4 +57,4 @@ You can run a simple CI process with `gcloud builds submit --config cloudbuild.y
 ## Credits
 - [Taylor Otwell](https://medium.com/@taylorotwell) - for building Laravel.
 - [SpringboardVR](https://springboardvr.com/) - for allowing this project to happen by providing initial production case.
-- Google Cloud - for building great products.
+- [Google Cloud](https://cloud.google.com/) - for building great products.
