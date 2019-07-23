@@ -38,6 +38,10 @@ Firevel is a Laravel 5.8 after [small updates](https://github.com/firevel/fireve
 - [Stack driver log channel](https://github.com/firevel/stackdriver-log-channel)
 - [Laravel Firestore wrapper](https://github.com/firevel/firestore)
 
+## Usage
+
+You can use Firevel in the same way you use Laravel. Be aware of [Firebase limits](https://firebase.google.com/docs/firestore/quotas) and [Google App Engine limits](https://cloud.google.com/appengine/docs/standard/php7/runtime). You should also replace Eloquent models with [Firequent](https://github.com/firevel/firequent), by using `use Firevel\Firequent\Model;` instead of `use Illuminate\Database\Eloquent\Model;` inside a model class. Keep in mind that Firequent is in beta and support only basic queries.
+
 ## CI
 
 You can run a simple CI process with `gcloud builds submit --config cloudbuild.yaml --substitutions _APP_KEY=` with your production API key at the end. You can also [connect it with your existing repository](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories) but remember to setup _APP_KEY.
