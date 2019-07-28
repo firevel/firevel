@@ -23,7 +23,7 @@ In addition to standard [Laravel Framework](https://laravel.com/) benefits it of
 composer create-project firevel/firevel
 ```
 
-3) Deploy project with:
+4) Deploy project with:
 ```
 gcloud app deploy
 ```
@@ -50,6 +50,7 @@ You should also replace Eloquent models with [Firequent](https://github.com/fire
 You can run a simple CI process with `gcloud builds submit --config cloudbuild.yaml --substitutions _APP_KEY=` with your production API key at the end. You can also [connect it with your existing repository](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories) but remember to setup _APP_KEY.
 
 ## More
+- [Serverless PHP on App Engine + Cloud Firestore with Firevel](https://medium.com/firebase-developers/serverless-php-on-app-engine-firestore-c22a119dc608)
 - [App Engine documentation](https://cloud.google.com/appengine/docs/standard/php7/)
 - [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/php7/how-requests-are-routed)
 - [Get to know Cloud Firestore](https://www.youtube.com/watch?v=v_hR4K4auoQ&list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ)
