@@ -45,6 +45,9 @@ You can use Firevel in the same way you use Laravel. Be aware of [Firebase limit
 
 You should also replace Eloquent models with [Firequent](https://github.com/firevel/firequent), by using `use Firevel\Firequent\Model;` instead of `use Illuminate\Database\Eloquent\Model;` inside a model class. Keep in mind that Firequent is in beta and support only basic queries.
 
+## File Storage
+By default Firevel running inside App Engine is using [Google Cloud Storage file system](https://github.com/Superbalist/laravel-google-cloud-storage), and  `{GOOGLE_CLOUD_PROJECT}.appspot.com/services/{GAE_SERVICE}/storage/` path.
+
 ## CI
 
 You can run a simple CI process with `gcloud builds submit --config cloudbuild.yaml --substitutions _APP_KEY=` with your production API key at the end. You can also [connect it with your existing repository](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories) but remember to setup _APP_KEY.
