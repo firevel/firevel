@@ -42,6 +42,15 @@ return [
     */
 
     'disks' => [
+        'gcs' => [
+            'driver' => 'gcs',
+            'project_id' => env('GOOGLE_CLOUD_PROJECT'),
+            'key_file' => env('GOOGLE_APPLICATION_CREDENTIALS', ''), // 
+            'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET', env('GOOGLE_CLOUD_PROJECT').'.appspot.com'), // Default bucket
+            'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', 'services/'.env('GAE_SERVICE').'/storage/'), // Storage prefix
+            'storage_api_uri' => env('GOOGLE_CLOUD_STORAGE_API_URI', null), // see: Public URLs below
+            'visibility' => 'private', // optional: public|private
+        ],
 
         'local' => [
             'driver' => 'local',
