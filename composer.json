@@ -16,7 +16,8 @@
         "firevel/firestore-session-driver": "^1.0",
         "firevel/stackdriver-log-channel": "^1.0.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "superbalist/laravel-google-cloud-storage": "^2.2"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
