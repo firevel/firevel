@@ -27,5 +27,5 @@ php artisan key:generate --ansi
 # Run unit tests
 ./vendor/bin/phpunit
 
-# Cleanup
-rm .env
+# Apply .gcloudignore file used in App Engine
+cp ci/.gcloudignore.production ./.gcloudignore
