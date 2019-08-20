@@ -1,6 +1,13 @@
 steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'production']
+
 - name: 'gcr.io/google-appengine/php72'
-  args: ['sh','ci/build-production.sh']
+  entrypoint: sh
+  args: ['ci/build-production.sh']
   env:
   - '_APP_KEY=${_APP_KEY}'
 
