@@ -1,0 +1,15 @@
+# This file specifies files that are *not* uploaded to App Engine after CI build.
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+
+# PHP Composer dependencies:
+/vendor/
+
+# Node modules:
+/node_modules/
+
+# Laravel .env
+.env
