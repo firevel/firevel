@@ -28,7 +28,7 @@ composer create-project firevel/firevel
 gcloud app deploy
 ```
 
-Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables.
+Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables. If you prefer to use `git clone https://github.com/firevel/firevel.git`, you should also run `php artisan firevel:generate:app` to generate your `app.yaml` file.
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
@@ -50,7 +50,9 @@ By default Firevel running inside App Engine is using [Google Cloud Storage file
 
 ## CI
 
-You can run a simple CI process with `gcloud builds submit --config cloudbuild.yaml --substitutions _APP_KEY=` with your production API key at the end. You can also [connect it with your existing repository](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories) but remember to setup _APP_KEY.
+You can run a simple CI process with `gcloud builds submit --config cloudbuild.yaml --substitutions _APP_KEY=` with your production API key at the end. You can also [connect it with your existing repository](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories) but remember about setting `_APP_KEY` in substitution variables.
+
+You also must [grant App Engine access to the Cloud Build service account](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories#grant_access_to_the_service_account).
 
 ## More
 - [Serverless PHP on App Engine + Cloud Firestore with Firevel](https://medium.com/firebase-developers/serverless-php-on-app-engine-firestore-c22a119dc608)
