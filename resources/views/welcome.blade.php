@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -6,11 +6,11 @@
 
         <title>Firevel</title>
 
-        <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <!-- Scripts -->
         <script src="{{ asset('static/js/app.js') }}" defer></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="{{mix('static/css/app.css')}}">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
