@@ -9,6 +9,9 @@
         <!-- Scripts -->
         <script src="{{ asset('static/js/app.js') }}" defer></script>
 
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="{{mix('static/css/app.css')}}">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
