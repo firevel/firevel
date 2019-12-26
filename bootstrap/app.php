@@ -49,7 +49,7 @@ $app->singleton(
 | In production, writes are not allowed in base path.
 |
 */
-$app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
+$app->useStoragePath(env('APP_STORAGE', base_path().'/storage'));
 
 /*
 |--------------------------------------------------------------------------
