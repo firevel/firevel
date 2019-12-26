@@ -28,11 +28,11 @@ composer create-project firevel/firevel
 gcloud app deploy
 ```
 
-Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables. If you prefer to use `git clone https://github.com/firevel/firevel.git`, you should also run `php artisan firevel:generate:app` to generate your `app.yaml` file.
+Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables. If you prefer to use `git clone https://github.com/firevel/firevel.git`, you should also run `php artisan firevel:generate:app` to generate your `app.yaml` file. You might also need to enable App Engine Admin API.
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
-Firevel is a Laravel 5.8 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
+Firevel is a Laravel 6 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
 - [Firestore Session driver](https://github.com/firevel/firestore-session-driver)
 - [Firestore Cache driver](https://github.com/firevel/firestore-cache-driver)
 - [Stack driver log channel](https://github.com/firevel/stackdriver-log-channel)
