@@ -2,7 +2,7 @@
 
 ## About Firevel
 
-Firevel is a modified, serverless version of [Laravel Framework](https://laravel.com/) designed to work inside Google App Engine standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
+Firevel is a modified, serverless version of [Laravel Framework](https://laravel.com/) designed to work inside Google App Engine PHP 7.3 standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
 
 In addition to standard [Laravel Framework](https://laravel.com/) benefits it offers:
 
