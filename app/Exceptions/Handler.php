@@ -26,7 +26,6 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-
     /**
      * Google Cloud Stackdriver Error Reporting.
      *

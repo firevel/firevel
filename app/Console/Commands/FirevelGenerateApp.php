@@ -44,8 +44,9 @@ class FirevelGenerateApp extends Command
      */
     public function handle()
     {
-        if (!$this->option('force') && file_exists($this->filename)) {
+        if (! $this->option('force') && file_exists($this->filename)) {
             $this->error($this->filename.' already exists.');
+
             return;
         }
 
@@ -54,7 +55,7 @@ class FirevelGenerateApp extends Command
             $app = str_replace("\${_{$key}}", $value, $app); // Cloud build use _VAR_NAME format for env variables.
             $app = str_replace("\${{$key}}", $value, $app);
         }
-        
+
         file_put_contents($this->filename, $app);
 
         $this->info("app.yaml file generated. Run 'gcloud app deploy' to deploy your app.");
