@@ -25,6 +25,6 @@ deploy_staging:
   - gcloud builds submit --config .ci/single-project/staging/cloudbuild.yaml --project $PROJECT_ID
   environment:
     name: staging
-    url: https://staging-$PROJECT_ID.appspot.com
+    url: https://staging-dot-$PROJECT_ID.appspot.com
 after_script:
   - rm /tmp/$CI_PIPELINE_ID.json
