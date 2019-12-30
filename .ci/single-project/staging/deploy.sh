@@ -1,1 +1,1 @@
-gcloud app deploy app.staging.yaml
+gcloud app deploy
