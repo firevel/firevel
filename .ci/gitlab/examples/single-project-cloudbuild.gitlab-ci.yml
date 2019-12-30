@@ -9,7 +9,7 @@ deploy_production:
   script:
   - cp $APP_YAML app.yaml
   - cp $ENV .env
-  - echo $SERVICE_ACCOUNT > /tmp/$CI_PIPELINE_ID.json
+  - cp $SERVICE_ACCOUNT /tmp/$CI_PIPELINE_ID.json
   - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
   - gcloud builds submit --config .ci/single-project/production/cloudbuild.yaml --project $PROJECT_ID
 deploy_staging:
@@ -20,7 +20,7 @@ deploy_staging:
   script:
   - cp $APP_YAML app.yaml
   - cp $ENV .env
-  - echo $SERVICE_ACCOUNT > /tmp/$CI_PIPELINE_ID.json
+  - cp $SERVICE_ACCOUNT /tmp/$CI_PIPELINE_ID.json
   - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
   - gcloud builds submit --config .ci/single-project/staging/cloudbuild.yaml --project $PROJECT_ID
   environment:
