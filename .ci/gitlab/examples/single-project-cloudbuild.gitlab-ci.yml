@@ -1,0 +1,30 @@
+image: google/cloud-sdk:alpine
+
+deploy_production:
+  stage: deploy
+  environment: production
+  when: manual
+  only:
+  - master
+  script:
+  - cp $APP_YAML app.yaml
+  - cp $ENV .env
+  - cp $SERVICE_ACCOUNT /tmp/$CI_PIPELINE_ID.json
+  - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
+  - gcloud builds submit --config .ci/single-project/production/cloudbuild.yaml --project $PROJECT_ID
+deploy_staging:
+  stage: deploy
+  environment: staging
+  only:
+  - master
+  script:
+  - cp $APP_YAML app.yaml
+  - cp $ENV .env
+  - cp $SERVICE_ACCOUNT /tmp/$CI_PIPELINE_ID.json
+  - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
+  - gcloud builds submit --config .ci/single-project/staging/cloudbuild.yaml --project $PROJECT_ID
+  environment:
+    name: staging
+    url: https://staging-dot-$PROJECT_ID.appspot.com
+after_script:
+  - rm /tmp/$CI_PIPELINE_ID.json

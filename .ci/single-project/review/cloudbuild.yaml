@@ -1,0 +1,16 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  entrypoint: sh
+  args: ['.ci/single-project/review/build-front-end.sh']
+- name: 'gcr.io/google-appengine/php72'
+  entrypoint: sh
+  args: ['.ci/single-project/review/build-back-end.sh']
+- name: 'gcr.io/google-appengine/php72'
+  entrypoint: sh
+  args: ['.ci/single-project/review/test.sh']
+- name: "gcr.io/cloud-builders/gcloud"
+  entrypoint: sh
+  args: ['.ci/single-project/review/deploy.sh']
+  env:
+  - '_VERSION=${_VERSION}'
+timeout: "1600s"
