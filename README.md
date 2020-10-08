@@ -12,11 +12,23 @@ In addition to standard [Laravel Framework](https://laravel.com/) benefits it of
 - [Free tier eligibility](https://cloud.google.com/free/).
 - Capacity to deal with high loads.
 
+## Requirements
+
+- [Laravel Server Requirements](https://laravel.com/docs/6.x/installation#server-requirements)
+- [gRPC extension](https://cloud.google.com/php/grpc)
+- [gcloud command-line tool](https://cloud.google.com/sdk/docs/quickstarts)
+
+## Before you start
+
+- Make sure you `gcloud` is initialized using `gcloud init` command.
+- Make sure you created project at [Google Cloud Platform Console](https://console.cloud.google.com/project) and set it on your console using `gcloud config set project PROJECT_ID`.
+- Login to [Google Console](https://console.cloud.google.com/) find [Firesore section](https://console.cloud.google.com/firestore) and make sure that your project is running on [Native mode](`https://cloud.google.com/datastore/docs/firestore-or-datastore`). If your project is already using Datastore mode you might need to create a new project.
+
 ## Installation
 
 1) Create a project in the [Google Cloud Platform Console](https://console.cloud.google.com/project).
 
-2) [Install gcloud command-line tool](https://cloud.google.com/sdk/gcloud/).
+2) [Install](https://cloud.google.com/sdk/docs/quickstarts) and initialize (`gcloud init`) [gcloud command-line tool](https://cloud.google.com/sdk/gcloud).
 
 3) Create firevel project with:
 ```
@@ -53,6 +65,10 @@ By default Firevel running inside App Engine is using [Google Cloud Storage file
 You can run a simple CI process with `gcloud builds submit --config cloudbuild.yaml --substitutions _APP_KEY=` with your production API key at the end. You can also [connect it with your existing repository](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories) but remember about setting `_APP_KEY` in substitution variables.
 
 You also must [grant App Engine access to the Cloud Build service account](https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories#grant_access_to_the_service_account).
+
+## Workers
+
+If you are going to use serverless workers, install https://github.com/firevel/cloud-tasks-queue-driver.
 
 ## More
 - [Serverless PHP on App Engine + Cloud Firestore with Firevel](https://medium.com/firebase-developers/serverless-php-on-app-engine-firestore-c22a119dc608)
