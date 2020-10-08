@@ -2,7 +2,7 @@
 
 ## About Firevel
 
-Firevel is a modified, serverless version of [Laravel Framework](https://laravel.com/) designed to work inside Google App Engine PHP 7.3 standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
+Firevel is a modified, serverless version of [Laravel 7](https://laravel.com/) designed to work inside Google App Engine PHP 7.3 standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
 
 In addition to standard [Laravel Framework](https://laravel.com/) benefits it offers:
 
@@ -44,7 +44,7 @@ Firevel does not require any credentials while running inside App Engine. If you
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
-Firevel is a Laravel 6 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
+Firevel is a Laravel 7 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
 - [Firestore Session driver](https://github.com/firevel/firestore-session-driver)
 - [Firestore Cache driver](https://github.com/firevel/firestore-cache-driver)
 - [Stack driver log channel](https://github.com/firevel/stackdriver-log-channel)
