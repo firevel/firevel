@@ -96,7 +96,7 @@ If you are going to use serverless workers, install https://github.com/firevel/c
 - Laravel 8 base.
 - CI generator as separate package.
 - Improved MySQL handling (socket connections + passwordless authentication).
-- Impvoed caching.
+- File cache.
 
 ## More
 - [Serverless PHP on App Engine + Cloud Firestore with Firevel](https://medium.com/firebase-developers/serverless-php-on-app-engine-firestore-c22a119dc608)
