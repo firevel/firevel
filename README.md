@@ -92,6 +92,12 @@ You also must [grant App Engine access to the Cloud Build service account](https
 
 If you are going to use serverless workers, install https://github.com/firevel/cloud-tasks-queue-driver.
 
+## Roadmap
+- Laravel 8 base.
+- CI generator as separate package.
+- Improved MySQL handling (socket connections + passwordless authentication).
+- Impvoed caching.
+
 ## More
 - [Serverless PHP on App Engine + Cloud Firestore with Firevel](https://medium.com/firebase-developers/serverless-php-on-app-engine-firestore-c22a119dc608)
 - [App Engine documentation](https://cloud.google.com/appengine/docs/standard/php7/)
