@@ -51,7 +51,7 @@ return [
             'database' => env('DB_DATABASE', env('GAE_SERVICE', 'forge')), // Use service name as default database.
             // IAM authentication (ref.: https://cloud.google.com/sql/docs/mysql/iam-logins)
             'username' => env('DB_USERNAME', env('GOOGLE_CLOUD_PROJECT', 'forge')),
-            'password' => env('DB_PASSWORD') ?? app(\Google\Auth\Credentials\GCECredentials::class)->fetchAuthToken()['access_token'],
+            'password' => env('DB_PASSWORD') ?? (app(\Google\Auth\Credentials\GCECredentials::class)->fetchAuthToken()['access_token'] ?? ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
