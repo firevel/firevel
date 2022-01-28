@@ -27,20 +27,20 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * Google Cloud Stackdriver Error Reporting.
+     * Report or log an exception.
      *
      * @param  \Throwable  $exception
      * @return void
      *
-     * @throws \Exception
+     * @throws \Throwable
      */
     public function report(Throwable $exception)
     {
         if (env('GAE_SERVICE')) {
             \Firevel\Stackdriver\StackdriverExceptionHandler::handle($exception);
-        } else {
-            parent::report($exception);
         }
+
+        parent::report($exception);
     }
 
     /**
