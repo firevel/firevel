@@ -37,20 +37,11 @@ return [
     | may even configure multiple disks of the same driver. Defaults have
     | been setup for each driver as an example of the required options.
     |
-    | Supported Drivers: "local", "ftp", "sftp", "s3", "gcs"
+    | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
 
     'disks' => [
-        'gcs' => [
-            'driver' => 'gcs',
-            'project_id' => env('GOOGLE_CLOUD_PROJECT'),
-            'key_file' => env('GOOGLE_APPLICATION_CREDENTIALS', ''), // Path to credentials. Empty string is related with issue 60 in recent driver version.
-            'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET', env('GOOGLE_CLOUD_PROJECT').'.appspot.com'), // Default bucket
-            'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', 'services/'.env('GAE_SERVICE').'/storage/'), // Storage prefix
-            'storage_api_uri' => env('GOOGLE_CLOUD_STORAGE_API_URI', null), // see: Public URLs below
-            'visibility' => 'private', // optional: public|private
-        ],
 
         'local' => [
             'driver' => 'local',
@@ -71,8 +62,24 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
+            'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Symbolic Links
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the symbolic links that will be created when the
+    | `storage:link` Artisan command is executed. The array keys should be
+    | the locations of the links and the values should be their targets.
+    |
+    */
+
+    'links' => [
+        public_path('storage') => storage_path('app/public'),
     ],
 
 ];
