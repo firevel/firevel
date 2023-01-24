@@ -10,7 +10,6 @@
     "require": {
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
-        "firevel/firequent": "^0.7.2",
         "firevel/firestore": "^1.0.3",
         "firevel/firestore-cache-driver": "^1.0.1",
         "firevel/firestore-session-driver": "^1.0.2",
