@@ -2,7 +2,7 @@
 
 ## About Firevel
 
-Firevel is a modified, serverless version of [Laravel 7](https://laravel.com/) designed to work inside Google App Engine PHP 7.3 standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
+Firevel is a modified, serverless version of [Laravel 8](https://laravel.com/) designed to work inside Google App Engine PHP 7.3 standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
 
 In addition to standard [Laravel Framework](https://laravel.com/) benefits it offers:
 
@@ -66,18 +66,15 @@ services:
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
-Firevel is a Laravel 7 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
+Firevel is a Laravel 8 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
 - [Firestore Session driver](https://github.com/firevel/firestore-session-driver)
 - [Firestore Cache driver](https://github.com/firevel/firestore-cache-driver)
 - [Stack driver log channel](https://github.com/firevel/stackdriver-log-channel)
 - [Laravel Firestore wrapper](https://github.com/firevel/firestore)
-- [Firequent](https://github.com/firevel/firequent)
 
 ## Usage
 
 You can use Firevel in the same way you use Laravel. Be aware of [Firebase limits](https://firebase.google.com/docs/firestore/quotas) and [Google App Engine limits](https://cloud.google.com/appengine/docs/standard/php7/runtime).
-
-You should also replace Eloquent models with [Firequent](https://github.com/firevel/firequent), by using `use Firevel\Firequent\Model;` instead of `use Illuminate\Database\Eloquent\Model;` inside a model class. Keep in mind that Firequent is in beta and support only basic queries.
 
 ## File Storage
 By default Firevel running inside App Engine is using [Google Cloud Storage file system](https://github.com/Superbalist/laravel-google-cloud-storage), and  `{GOOGLE_CLOUD_PROJECT}.appspot.com/services/{GAE_SERVICE}/storage/` path.
