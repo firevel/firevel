@@ -13,17 +13,17 @@
         "firevel/firestore-cache-driver": "^1.0.1",
         "firevel/firestore-session-driver": "^1.0.2",
         "firevel/stackdriver-log-channel": "^1.0.0",
-        "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
-        "laravel/framework": "^8.83",
-        "laravel/tinker": "^2.5",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^9.52",
+        "laravel/tinker": "^2.7",
         "superbalist/laravel-google-cloud-storage": "^2.2"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
+        "nunomaduro/collision": "^6.3",
+        "phpunit/phpunit": "^9.5.10",
+        "spatie/laravel-ignition": "^1.4"
     },
     "config": {
         "optimize-autoloader": true,
