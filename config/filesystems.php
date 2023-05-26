@@ -39,7 +39,6 @@ return [
             'visibility' => 'private', // optional: public|private
         ],
 
-
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
