@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DISK', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -22,9 +22,9 @@ return [
     |
     | Here you may configure as many filesystem "disks" as you wish, and you
     | may even configure multiple disks of the same driver. Defaults have
-    | been setup for each driver as an example of the required options.
+    | been set up for each driver as an example of the required values.
     |
-    | Supported Drivers: "local", "ftp", "sftp", "s3", "gcs"
+    | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
 
@@ -32,16 +32,21 @@ return [
         'gcs' => [
             'driver' => 'gcs',
             'project_id' => env('GOOGLE_CLOUD_PROJECT'),
-            'key_file' => env('GOOGLE_APPLICATION_CREDENTIALS', ''), // Path to credentials. Empty string is related with issue 60 in recent driver version.
+            'key_file_path' => env('GOOGLE_APPLICATION_CREDENTIALS', ''), // Path to credentials. Empty string is related with issue 60 in recent driver version.
+            'key_file' => [], // optional: Array of data that substitutes the .json file (see below)
             'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET', env('GOOGLE_CLOUD_PROJECT').'.appspot.com'), // Default bucket
             'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', 'services/'.env('GAE_SERVICE').'/storage/'), // Storage prefix
-            'storage_api_uri' => env('GOOGLE_CLOUD_STORAGE_API_URI', null), // see: Public URLs below
+            'storage_api_uri' => env('GOOGLE_CLOUD_STORAGE_API_URI'), // see: Public URLs below
+            'apiEndpoint' => env('GOOGLE_CLOUD_STORAGE_API_ENDPOINT'), // set storageClient apiEndpoint
             'visibility' => 'private', // optional: public|private
+            'visibility_handler' => null, // optional: set to \League\Flysystem\GoogleCloudStorage\UniformBucketLevelAccessVisibility::class to enable uniform bucket level access
+            'metadata' => ['cacheControl'=> 'public,max-age=86400'], // optional: default metadata
         ],
 
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+            'throw' => false,
         ],
 
         'public' => [
@@ -49,6 +54,7 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
+            'throw' => false,
         ],
 
         's3' => [
@@ -60,6 +66,7 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+            'throw' => false,
         ],
 
     ],
