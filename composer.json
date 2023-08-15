@@ -14,16 +14,16 @@
         "firevel/firestore-session-driver": "^1.0.2",
         "firevel/stackdriver-log-channel": "^1.0.0",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.52",
-        "laravel/tinker": "^2.7",
+        "laravel/framework": "^10.18",
+        "laravel/tinker": "^2.8",
         "spatie/laravel-google-cloud-storage": "^2.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.3",
+        "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.4"
+        "spatie/laravel-ignition": "^2.0"
     },
     "config": {
         "optimize-autoloader": true,
@@ -47,7 +47,7 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
