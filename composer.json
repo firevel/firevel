@@ -12,7 +12,7 @@
         "firevel/firestore": "^1.0.3",
         "firevel/firestore-cache-driver": "^1.0.1",
         "firevel/firestore-session-driver": "^1.0.2",
-        "firevel/stackdriver-log-channel": "^1.0.0",
+        "firevel/stackdriver-log-channel": "^1.1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.18",
         "laravel/tinker": "^2.8",
