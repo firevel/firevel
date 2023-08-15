@@ -40,7 +40,7 @@ return [
             'apiEndpoint' => env('GOOGLE_CLOUD_STORAGE_API_ENDPOINT'), // set storageClient apiEndpoint
             'visibility' => 'private', // optional: public|private
             'visibility_handler' => null, // optional: set to \League\Flysystem\GoogleCloudStorage\UniformBucketLevelAccessVisibility::class to enable uniform bucket level access
-            'metadata' => ['cacheControl'=> 'public,max-age=86400'], // optional: default metadata
+            'metadata' => ['cacheControl' => 'public,max-age=86400'], // optional: default metadata
         ],
 
         'local' => [
