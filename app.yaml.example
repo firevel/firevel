@@ -1,4 +1,4 @@
-runtime: php73
+runtime: php81
 
 env_variables:
   ## Put your environment variables here.
