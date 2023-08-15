@@ -43,7 +43,6 @@ return [
             'metadata' => ['cacheControl' => 'public,max-age=86400'], // optional: default metadata
         ],
 
-
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
