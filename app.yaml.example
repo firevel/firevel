@@ -1,15 +1,11 @@
 runtime: php81
 
 env_variables:
-  ## Put your environment variables here.
-  APP_KEY: ${_APP_KEY}
-  APP_ENV: production
   FILESYSTEM_DISK: gcs
   FILESYSTEM_CLOUD: gcs
   APP_STORAGE: /tmp
   VIEW_COMPILED_PATH: /tmp
   LOG_CHANNEL: stackdriver
-  APP_DEBUG: false
   SESSION_DRIVER: firestore
   CACHE_DRIVER: firestore
   ## Store bootstrap cache files in writeable /tmp.
