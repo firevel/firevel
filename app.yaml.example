@@ -1,4 +1,4 @@
-runtime: php81
+runtime: php82
 
 env_variables:
   ## Put your environment variables here.
@@ -16,6 +16,7 @@ env_variables:
   APP_SERVICES_CACHE: /tmp/bootstrap-cache-services.php
   APP_PACKAGES_CACHE: /tmp/bootstrap-cache-packages.php
 build_env_variables:
+  GOOGLE_COMPOSER_VERSION: 2.5.8
   APP_SERVICES_CACHE: /tmp/bootstrap-cache-services.php
   APP_PACKAGES_CACHE: /tmp/bootstrap-cache-packages.php
 handlers:
