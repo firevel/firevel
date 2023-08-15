@@ -28,7 +28,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "ext-sodium": "2"
+        }
     },
     "extra": {
         "laravel": {
