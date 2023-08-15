@@ -42,7 +42,7 @@ class FirevelGenerateApp extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(): void
     {
         if (! $this->option('force') && file_exists($this->filename)) {
             $this->error($this->filename.' already exists.');
