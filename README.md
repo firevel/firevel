@@ -42,28 +42,6 @@ gcloud beta app deploy
 
 Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables. If you prefer to use `git clone https://github.com/firevel/firevel.git`, you should also run `php artisan firevel:generate:app` to generate your `app.yaml` file. You might also need to enable App Engine Admin API.
 
-## Local development
-
-To setup local environment you can use `docker-compose.yml`:
-```
-version: '3'
-
-volumes:
-  firestore-data:
-
-services:
-  firestore:
-    image: pathmotion/firestore-emulator-docker
-    volumes:
-      - firestore-data:/opt/data
-    environment:
-      - FIRESTORE_PROJECT_ID=${DB_DATABASE}
-  app:
-    image: firevel/firevel:php73
-    volumes:
-      - ./:/var/www/app
-```
-
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
 Firevel is a Laravel 10 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
