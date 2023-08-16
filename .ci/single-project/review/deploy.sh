@@ -1,1 +1,0 @@
-gcloud app deploy --version $_VERSION --no-promote
