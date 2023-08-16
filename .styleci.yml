@@ -1,7 +1,9 @@
-preset: laravel
-disabled:
-  - unused_use
-finder:
-  not-name:
-    - index.php
-    - server.php
+php:
+  preset: laravel
+  disabled:
+    - no_unused_imports
+  finder:
+    not-name:
+      - index.php
+js: true
+css: true
