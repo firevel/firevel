@@ -4,7 +4,7 @@ env_variables:
   FILESYSTEM_DISK: gcs
   FILESYSTEM_CLOUD: gcs
   APP_STORAGE: /tmp
-  VIEW_COMPILED_PATH: /tmp
+  VIEW_COMPILED_PATH: /tmp/storage/views
   LOG_CHANNEL: stackdriver
   SESSION_DRIVER: firestore
   CACHE_DRIVER: firestore
