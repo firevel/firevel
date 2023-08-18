@@ -8,9 +8,9 @@ use Throwable;
 class Handler extends ExceptionHandler
 {
     /**
-     * A list of the inputs that are never flashed for validation exceptions.
+     * The list of the inputs that are never flashed to the session on validation exceptions.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected $dontFlash = [
         'current_password',
@@ -19,27 +19,12 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * Report or log an exception.
-     *
-     * @return void
-     *
-     * @throws \Throwable
+     * Register the exception handling callbacks for the application.
      */
-    public function report(Throwable $exception)
+    public function register(): void
     {
-        parent::report($exception);
-    }
-
-    /**
-     * Render an exception into an HTTP response.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Symfony\Component\HttpFoundation\Response
-     *
-     * @throws \Throwable
-     */
-    public function render($request, Throwable $exception)
-    {
-        return parent::render($request, $exception);
+        $this->reportable(function (Throwable $e) {
+            //
+        });
     }
 }
