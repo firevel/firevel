@@ -30,17 +30,13 @@ In addition to standard [Laravel Framework](https://laravel.com/) benefits it of
 
 2) [Install](https://cloud.google.com/sdk/docs/quickstarts) and initialize (`gcloud init`) [gcloud command-line tool](https://cloud.google.com/sdk/gcloud).
 
-3) Create firevel project with:
-```
-composer create-project firevel/firevel
-```
+3) Create firevel project with `composer create-project firevel/firevel`
 
-4) Deploy project with:
-```
-gcloud beta app deploy
-```
+4) Set your `app.yaml` after copying with `cp app.yaml.example app.yaml`
 
-Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables. If you prefer to use `git clone https://github.com/firevel/firevel.git`, you should also run `php artisan firevel:generate:app` to generate your `app.yaml` file. You might also need to enable App Engine Admin API.
+4) Deploy project with `gcloud beta app deploy`
+
+Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables. You might also need to enable App Engine Admin API.
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
