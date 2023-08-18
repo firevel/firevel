@@ -26,13 +26,13 @@ In addition to standard [Laravel Framework](https://laravel.com/) benefits it of
 
 ## Installation
 
-1) Create a project in the [Google Cloud Platform Console](https://console.cloud.google.com/project).
+1) Create a project in the [Google Cloud Platform Console](https://console.cloud.google.com/project)
 
-2) [Install](https://cloud.google.com/sdk/docs/quickstarts) and initialize (`gcloud init`) [gcloud command-line tool](https://cloud.google.com/sdk/gcloud).
+2) [Install](https://cloud.google.com/sdk/docs/quickstarts) and initialize (`gcloud init`) [gcloud command-line tool](https://cloud.google.com/sdk/gcloud)
 
 3) Create firevel project with `composer create-project firevel/firevel`
 
-4) Set your `app.yaml` after copying with `cp app.yaml.example app.yaml`
+4) Generate your `app.yaml` file using `php artisan firevel:generate app`
 
 4) Deploy project with `gcloud beta app deploy`
 
