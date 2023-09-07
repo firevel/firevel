@@ -59,7 +59,7 @@ You can configure PHP extensions for development mode using the `php.local.ini` 
 To execute PHP commands within the container, use the `/cnb/lifecycle/launcher`. For instance:
 
 ```bash
-/cnb/lifecycle/launcher php artisan tinker
+/cnb/lifecycle/launcher php route:list
 ```
 
 For those looking to utilize Composer within the container, it comes pre-installed. Access it with:
@@ -67,6 +67,21 @@ For those looking to utilize Composer within the container, it comes pre-install
 ```bash
 /cnb/lifecycle/launcher php vendor/bin/composer
 ```
+
+### Laravel Tinker
+
+To run Laravel Tinker, execute the following command:
+
+```bash
+/cnb/lifecycle/launcher php artisan tinker
+```
+
+For MacBook users, ensure the `TERM` variable is set correctly. As an example:
+
+```bash
+docker exec -e TERM=xterm-256color -it your_container_name /cnb/lifecycle/launcher php artisan tinker
+```
+
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
