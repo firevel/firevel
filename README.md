@@ -38,6 +38,36 @@ In addition to standard [Laravel Framework](https://laravel.com/) benefits it of
 
 Firevel does not require any credentials while running inside App Engine. If you like to run it locally you will also need to set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` .env variables. You might also need to enable App Engine Admin API.
 
+## Local Development with Docker and Buildpacks
+
+### Building the Image
+
+To replicate the production environment for local development, you can utilize Buildpacks. Use the [pack](https://buildpacks.io/docs/tools/pack/) command with specific environment variables:
+
+```bash
+pack build your_image_name --env=GOOGLE_COMPOSER_ARGS=--dev --builder=gcr.io/buildpacks/builder:v1
+```
+
+Once the image is built, it can be integrated with Docker, typically through a `docker-compose.yaml` file.
+
+### Configuration
+
+You can configure PHP extensions for development mode using the `php.local.ini` file. This allows for customized behavior during local development.
+
+### Accessing the Container Environment
+
+To execute PHP commands within the container, use the `/cnb/lifecycle/launcher`. For instance:
+
+```bash
+/cnb/lifecycle/launcher php artisan tinker
+```
+
+For those looking to utilize Composer within the container, it comes pre-installed. Access it with:
+
+```bash
+/cnb/lifecycle/launcher php vendor/bin/composer
+```
+
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
 Firevel is a Laravel 10 after [small updates](https://github.com/firevel/firevel/commits/master) and packages installation:
