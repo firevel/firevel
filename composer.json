@@ -10,7 +10,7 @@
         "firevel/firestore": "^1.0.5",
         "firevel/firestore-cache-driver": "^1.1.0",
         "firevel/firestore-session-driver": "^1.0.2",
-        "firevel/generator": "^0.0.1",
+        "firevel/generator": "^0.0.2",
         "firevel/stackdriver-log-channel": "^1.1.0",
         "laravel/framework": "^10.20",
         "laravel/tinker": "^2.8",
