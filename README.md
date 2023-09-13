@@ -79,7 +79,7 @@ To run Laravel Tinker, execute the following command:
 For MacBook users, ensure the `TERM` variable is set correctly. As an example:
 
 ```bash
-docker exec -e TERM=xterm-256color -it your_container_name /cnb/lifecycle/launcher php artisan tinker
+docker exec -e TERM=$TERM -it your_container_name /cnb/lifecycle/launcher php artisan tinker
 ```
 
 
