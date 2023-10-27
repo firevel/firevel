@@ -9,7 +9,7 @@
         "firevel/firestore": "^1.0.5",
         "firevel/firestore-cache-driver": "^1.1.0",
         "firevel/firestore-session-driver": "^1.0.2",
-        "firevel/generator": "^0.0.3",
+        "firevel/generator": "^0.1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.20",
         "laravel/tinker": "^2.8",

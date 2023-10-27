@@ -32,7 +32,7 @@ In addition to standard [Laravel Framework](https://laravel.com/) benefits it of
 
 3) Create firevel project with `composer create-project firevel/firevel`
 
-4) Generate your `app.yaml` file using `php artisan firevel:generate app`
+4) Generate your `app.yaml` file using `php artisan firevel:generate app.yaml`
 
 4) Deploy project with `gcloud beta app deploy`
 
