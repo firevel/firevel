@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel",
+    "name": "firevel/firevel",
     "type": "project",
     "description": "The Serverless Laravel Framework for Google App Engine + Firestore.",
     "keywords": ["laravel", "framework", "firevel", "app engine", "gcp"],
