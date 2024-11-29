@@ -1,4 +1,4 @@
-runtime: php83
+runtime: php84
 
 env_variables:
   FILESYSTEM_DISK: gcs
