@@ -20,7 +20,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->throttleApi();
 
-        $middleware->replace(\Illuminate\Http\Middleware\TrustProxies::class, \App\Http\Middleware\TrustProxies::class);
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
