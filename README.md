@@ -2,7 +2,7 @@
 
 ## About Firevel
 
-Firevel is a modified, serverless version of [Laravel 11](https://laravel.com/) designed to work inside Google App Engine PHP 8.4 standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
+Firevel is a modified, serverless version of [Laravel 12](https://laravel.com/) designed to work inside Google App Engine PHP 8.4 standard environment, together with [Google Firestore](https://cloud.google.com/firestore/) as database and cache.
 
 In addition to standard [Laravel Framework](https://laravel.com/) benefits it offers:
 
@@ -14,7 +14,7 @@ In addition to standard [Laravel Framework](https://laravel.com/) benefits it of
 
 ## Requirements
 
-- [Laravel Server Requirements](https://laravel.com/docs/11.x/installation#server-requirements)
+- [Laravel Server Requirements](https://laravel.com/docs/12.x/deployment#server-requirements)
 - [gRPC extension](https://cloud.google.com/php/grpc)
 - [gcloud command-line tool](https://cloud.google.com/sdk/docs/quickstarts)
 
@@ -85,7 +85,7 @@ docker exec -e TERM=$TERM -it your_container_name /cnb/lifecycle/launcher php ar
 
 ## Differences between [Laravel](https://laravel.com) and Firevel.
 
-Firevel is a Laravel 11 after small updates and packages installation:
+Firevel is a Laravel 12 after small updates and packages installation:
 - [Firestore Session driver](https://github.com/firevel/firestore-session-driver)
 - [Firestore Cache driver](https://github.com/firevel/firestore-cache-driver)
 - [Laravel Firestore wrapper](https://github.com/firevel/firestore)
