@@ -12,10 +12,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "firevel/firestore": "^1.0.6",
+        "firevel/firestore": "^1.1.0",
         "firevel/firestore-cache-driver": "^1.1.0",
         "firevel/firestore-session-driver": "^1.0.2",
-        "firevel/generator": "^0.3.0",
+        "firevel/generator": "^0.4.0",
         "laravel/framework": "^12.25",
         "laravel/tinker": "^2.10.1",
         "spatie/laravel-google-cloud-storage": "^2.3"
