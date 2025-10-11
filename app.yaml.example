@@ -13,7 +13,7 @@ env_variables:
   APP_PACKAGES_CACHE: /tmp/bootstrap-cache-packages.php
   LARAVEL_STORAGE_PATH: /tmp
 build_env_variables:
-  GOOGLE_COMPOSER_VERSION: 2.5.8
+  GOOGLE_COMPOSER_VERSION: 2.8.10
   APP_SERVICES_CACHE: /tmp/bootstrap-cache-services.php
   APP_PACKAGES_CACHE: /tmp/bootstrap-cache-packages.php
 handlers:
