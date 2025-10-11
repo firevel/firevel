@@ -28,5 +28,8 @@ handlers:
 - url: /static
   static_dir: public/static
 
+- url: /build
+  static_dir: public/build
+
 - url: .*
   script: auto
