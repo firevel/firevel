@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use Firevel\FirebaseAuthentication\FirebaseAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Firevel\FirebaseAuthentication\FirebaseAuthenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
@@ -20,7 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'firebase_id',
-        'avatar_url'
+        'avatar_url',
     ];
 
     /**
