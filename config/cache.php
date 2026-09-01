@@ -4,7 +4,7 @@ return [
 
     'stores' => [
         'firestore' => [
-            'driver' => 'firestore',
+            'driver'     => 'firestore',
             'collection' => 'cache',
         ],
     ],
